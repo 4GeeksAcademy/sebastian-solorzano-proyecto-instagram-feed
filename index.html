@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Feed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Barra superior -->
+<nav class="navbar navbar-light bg-white border-bottom px-3">
+  <div class="d-flex align-items-center">
+    <i class="bi bi-instagram fs-3 me-2"></i>
+    <span class="fs-4 fw-bold">Instagram</span>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#postModal">Create a new post</button>
+    <div class="dropdown">
+      <button class="btn btn-light border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-gear"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Botones de cambio de vista -->
+<div class="text-center my-3">
+  <ul class="nav nav-pills justify-content-center gap-3" id="viewTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab" aria-controls="grid" aria-selected="true">
+        <i class="bi bi-grid-3x3-gap-fill fs-4"></i>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#list" type="button" role="tab" aria-controls="list" aria-selected="false">
+        <i class="bi bi-square fs-4"></i>
+      </button>
+    </li>
+  </ul>
+</div>
+
+<!-- Contenido -->
+<div class="tab-content container" id="viewTabContent">
+  <!-- Vista 3x3 -->
+  <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
+    <div class=" row row-cols-1 row-cols-md-3 g-3">
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2025/04/09/07/56/selflove-9523280_640.png" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2023/07/04/07/25/self-consciousness-8105584_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2025/06/11/22/12/kackar-mountains-9655200_1280.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2014/11/03/10/44/camera-514992_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2018/07/06/00/42/not-3519509_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2017/02/18/08/41/self-confidence-2076793_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2017/02/18/08/41/self-confidence-2076792_640.jpg" class="img-fluid rounded" alt=""></div>
+      <div class="col"><img src="https://cdn.pixabay.com/photo/2020/05/02/02/58/man-5119694_640.jpg" class="img-fluid rounded" alt=""></div>
+    </div>
+  </div>
+
+  <!-- Vista lista -->
+  <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy dog Spark!</span>
+        <span>08/26</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">204 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy  ay love!</span>
+        <span>08/20</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2025/04/09/07/56/selflove-9523280_640.png" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">200 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy head to head!</span>
+        <span>08/22</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2023/07/04/07/25/self-consciousness-8105584_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">210 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy majestuoso!</span>
+        <span>08/30</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2025/06/11/22/12/kackar-mountains-9655200_1280.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">201 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy contraste!</span>
+        <span>08/16</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2014/11/03/10/44/camera-514992_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">200 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy delicios!</span>
+        <span>07/25</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2018/07/06/00/42/not-3519509_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">220 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy sublime!</span>
+        <span>08/15</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2017/02/18/08/41/self-confidence-2076793_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">231 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy universo!</span>
+        <span>08/06</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2017/02/18/08/41/self-confidence-2076792_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">224 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-between">
+        <span class="fw-bold">My Crazy reflejo!</span>
+        <span>08/10</span>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2020/05/02/02/58/man-5119694_640.jpg" class="img-fluid rounded">
+      <div class="card-body">
+        <p class="fw-bold mb-1">214 Likes</p>
+        <p class="mb-0">This is an example of a very good photo that you can post on instagram</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="postModalLabel">Create a new post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control mb-3" rows="3" placeholder="Caption..."></textarea>
+        <div class="d-flex gap-3" >
+          <i class="fa-solid fa-camera"></i>
+          <i class="fa-solid fa-location-dot "></i>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Publish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
